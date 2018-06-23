@@ -32,10 +32,10 @@ node('php'){
     }
 
     stage('Docker Build') {
-        sh 'docker build -t jeffersonsouza/laravel:$BUILD_NUMBER .'
+        sh 'docker build -t admxxi/curso-jenkins-laravel:$BUILD_NUMBER .'
     }
 
     stage('Docker Ship') {
-        sh 'docker push jeffersonsouza/laravel:$BUILD_NUMBER'
+        sh 'docker push admxxi/curso-jenkins-laravel:$BUILD_NUMBER'
     }
 }
